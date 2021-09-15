@@ -18,6 +18,7 @@ categories: android-yeoboya
 ### Camera Record (영상 녹화 모듈)
 - CameraRecorder-android v0.1.5
 - mp4parser-muxer 1.9
+
 ---
 
 # 설명하기 앞서서 말씀드리자면..
@@ -26,11 +27,12 @@ categories: android-yeoboya
 ---
 - # Video Trim Document
 ---
-> ## Base
-> | Class Name | Description |
-> | ---------- | ----------- |
-> | BaseFragment | - |
-> | BaseViewModel | - |
+
+## Base
+| Class Name | Description |
+| ---------- | ----------- |
+| BaseFragment | - |
+| BaseViewModel | - |
 
 > ## DataBinding
 > | Class Name | Description |
