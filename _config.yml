@@ -1,56 +1,63 @@
-title: SUN BLOG
-author: sun5066
-email: alstjr4434@naver.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  sun5066 android blog
-show_excerpts: true # set to true to show excerpts on the homepage
+# Site settings
+title_left    : "SUN BLOG"
+title_right   : "sun5066" # default: ""
+description   : "sun5066 android blog"
+keywords      : "android, yeoboya"
+url           : https://sun5066.github.io # site url
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "assets/images/git_profile.jpg" # image uri like logo/cover image for site seo
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
-plainwhite:
-  name: sun5066
-  tagline: Android Developer.
-  date_format: "%b %-d, %Y"
-  sitemap: true # set to true to generate sitemap.xml content
-  search: true # set to true to enable searchbar
-  dark_mode: true # set to true to add dark mode toggle
-  portfolio_image: "assets/images/git_profile.jpg" # the path from the base directory of the site to the image to display (no / at the start)
-  html_lang: "en" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
-  condensed_mobile:
-    #- home
-    - page
-    - post
-  # generate social links in footer
-  social_links:
-    github:  sun5066
-    email: alstjr4434@naver.com
-    #dribbble: jekyll
-    #flickr:   jekyll
-    #instagram: jekyll
-    #pinterest: jekyll
-    #youtube: jekyll
-    #facebook: jekyll
-    #soundcloud: jekyll
-    #telegram: jekyll
-    #gitlab: jekyll
-
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+google_analytics  : UA-XXXXX-XX
+twitter_username  : ""
+comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+disqus_shortname  : ""
+postshare_enabled : false
 
 # Build settings
-theme: plainwhite
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+source      : ./
+destination : ./_site
+
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+# Author settings
+author:
+  name     : "sun5066"
 
 plugins:
-  - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude:
+  - "gulp"
+  - "node_modules"
+  - "bower"
+  - "bower_components"
+  - "config.rb"
+  - "src"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "package.json"
+  - "gulpfile.js"
+  - "README.md"
+  - "Rakefile"
+  - "changelog.md"
+  - "script"
+  - "vendor"
+  - "thinkspace.gemspec"
