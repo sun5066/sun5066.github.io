@@ -1,17 +1,17 @@
 # Site settings
 title_left    : "SUN BLOG"
-title_right   : "sun5066" # default: ""
+title_right   : "" # default: ""
 description   : "sun5066 android blog"
 keywords      : "android, yeoboya"
-url           : https://sun5066.github.io # site url
+url           : "https://sun5066.github.io" # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "assets/images/git_profile.jpg" # image uri like logo/cover image for site seo
 
 google_analytics  : UA-XXXXX-XX
 twitter_username  : ""
-comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+comments_enabled  : true # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
-postshare_enabled : false
+postshare_enabled : true
 
 # Build settings
 permalink   : /:year/:title/
