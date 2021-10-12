@@ -51,6 +51,13 @@ Android Develop에서는 Coroutine Builder에 하드코딩하지 말라고 나�
 4. Unconfined: suspend 후 다시 실행되었을때 생각지도 못한 스레드에서 실행될수 있기 때문에 권장 X
 ```
 
+# Coroutine Context
+```
+코루틴 빌더는 매개변수로 Dispatcher, CoroutineContext를 받는다.
+그 중 CoroutineContext는 코루틴이 동작하는 환경이며, 인터페이스이기에 실제로 초기화할때는
+Job + Dispatcher + ErrorHandler 처럼 초기화할 수 있다.
+```
+
 # Channel
 ```
 (채널은 레퍼런스가 꽤나 많기 때문에 최대한 간략하게 써봅니다..;;)
