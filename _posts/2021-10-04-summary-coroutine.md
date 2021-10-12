@@ -24,6 +24,8 @@ categories: android
 
 # Coroutine Scope
 ```
+최종적으로 인터페이스이며 launch, async/await, produce 등등 코루틴을 만들때 사용하는 함수는 CoroutineScope의 확장함수임.
+
 1. CoroutineContext를 정의
 2. Coroutine의 LifeCycle을 관리
 3. viewModelScope, lifeCycleScope, mainScope 등 coroutine-android 라이브러리에서 지원되는 scope가 있음
