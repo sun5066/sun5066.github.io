@@ -35,7 +35,7 @@ categories: android
 
 # GlobalScope
 ```
-(사용은 안해보고 이론만 공부했습니다.)
+CoroutineScope를 상속받고있는 object 클래스(싱글톤)
 
 1. 사용 권장X
 2. 보통 앱이 실행되고 종료될때까지 백그라운드로 실행되는 작업에 사용함
