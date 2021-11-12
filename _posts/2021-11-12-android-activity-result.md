@@ -4,7 +4,6 @@ date: 2021-11-12 9:00:00 -0400
 categories: android
 ---
 
-# Deprecated된 onActivityResult() 함수의 로직을 변경없이 마이그레이션 하기
 조금은 늦었지만, 괜찮은 방법이라 생각하여 공유하고자 합니다.
 
 
@@ -31,6 +30,7 @@ class ResultObserver(private val registry: ActivityResultRegistry) : LifecycleOb
 
 ## 생명주기 옵저버 등록
 > BaseActivity 가 있다면 그곳에서 정의해주세요.
+
 ```
 class BaseActivity: Activity() {
     lateinit var mResultObserver: ResultObserver
