@@ -44,11 +44,11 @@ body {
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    padding-right: 0px; //$right-sidebar-width;
   }
 
   .page__inner-wrap {
-    float: left;
+    float: right;
     margin-top: 1em;
     margin-left: 0;
     margin-right: 0;
