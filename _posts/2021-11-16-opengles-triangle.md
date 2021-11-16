@@ -11,6 +11,8 @@ categories: android, openGLES
 
 # 삼각형 정의
 
+---
+
 ```
 class Triangle {
 
@@ -54,6 +56,8 @@ class Triangle {
 ---
 
 # Triangle 전체 코드
+
+---
 
 ```
 class Triangle {
@@ -173,6 +177,8 @@ class Triangle {
 ---
 
 # MainActivity
+
+---
 
 ```
 class MainActivity : AppCompatActivity() {
