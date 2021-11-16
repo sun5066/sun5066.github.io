@@ -11,19 +11,19 @@ categories: android
 ```
 class ResultObserver(private val registry: ActivityResultRegistry) : LifecycleObserver {
 
-    private lateinit var getIntentContent: ActivityResultLauncher<Intent>
-    private var intentCallback: ((ActivityResult) -> Unit)? = null
+    private lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
+    private var resultCallback: ((ActivityResult) -> Unit)? = null
 
     @OnLifecycleEvent(value = Lifecycle.Event.ON_CREATE)
     private fun onCreate(owner: LifecycleOwner) {
-        getIntentContent = registry.register("intentKey", owner, ActivityResultContracts.StartActivityForResult(), { result ->
-                intentCallback?.invoke(result)
-            })
+        activityResultLauncher = registry.register("intentKey", owner, ActivityResultContracts.StartActivityForResult(), { result ->
+            resultCallback?.invoke(result)
+        })
     }
 
     operator fun invoke(intent: Intent?, callback: (ActivityResult) -> Unit) {
-        intentCallback = callback
-        getIntentContent.launch(intent)
+        resultCallback = callback
+        activityResultLauncher.launch(intent)
     }
 }
 ```
