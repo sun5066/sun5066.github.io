@@ -1,6 +1,6 @@
 ---
 title: "android OpenGLES 삼각형 그리기 스터디"
-date: 2021-11-16 10:00:00 -0400
+date: 2021-11-17 10:00:00 -0400
 categories: android, openGLES
 ---
 
