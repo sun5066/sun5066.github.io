@@ -46,6 +46,14 @@ categories: android
  - RxJava 와 별개로 Glide를 Coil로 마이그레이션 했을때 성능차이가 크게 보였다.
 ---
 
+# 결론
+
+ - 기존의 RxJava 사용중에 문제가 없다면, 굳이 급하게 바꿀 필요는 없다.
+ - 코루틴에 관심이 있다면, 세미나 영상을 찾아보는것도 좋다.
+ - 한글로 된 책은 "코틀린 동시성 프로그래밍" 이라는 책이 유일하지만, 현재는 구하기 힘들다.
+
+---
+
 ## 참고사항
 
 [강남언니 블로그](https://blog.gangnamunni.com/post/android-coroutine/)
