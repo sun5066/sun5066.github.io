@@ -44,6 +44,7 @@ categories: android
  - flow의 catch에서 예외를 잡아내지 못하는 이슈가 있다. [[이슈 보러가기]](https://stackoverflow.com/questions/64411586/exception-in-flow-is-not-caught)
    - 제가 겪은 사항은 DB Server의 데이터 반환에서 생긴 문제였지만, flow catch에서 NullPointerException 이 발생하는걸 잡아내지 못한 경우였습니다.
  - RxJava 와 별개로 Glide를 Coil로 마이그레이션 했을때 성능차이가 크게 보였다. [[성능차이 보러가기]](https://jizard.tistory.com/224)
+
 ---
 
 # 결론
