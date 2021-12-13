@@ -6,7 +6,6 @@ categories: android
 
 # Why Coroutine?
 
----
 
  - "비동기적"인 코루틴을 사용하여, RxJava 보다 나은 퍼포먼스를 기대
  - 공식 Develop에서 제공하는 가이드
@@ -16,18 +15,16 @@ categories: android
 
 # Migration
 
----
 
- ### RxJava를 사용중인 목록
+ ## RxJava를 사용중인 목록
  
  - REST API
  - 아이템 리소스 다운로드 및 압축 해제
  - WebView Bridge
  - 각 화면별 타이머기능(방송 시간, 테이프 녹음 시간, 애니메이션 재생 쿨타임 등)
 
----
 
- ### 어떻게 대응?
+ ## 어떻게 대응?
  
  - 각 View(Activity, Fragment)에서는 lifecycleScope 사용
  - ViewModel 에서는 viewModelScope 사용
@@ -35,9 +32,8 @@ categories: android
 
  > 클럽라이브 구조상 RxJava 사용비중이 적기 때문에 생각보다 작업사항이 적었음
 
----
 
- # 실제 변경후 느낀점
+ ## 실제 변경후 느낀점
 
  - 기대했던 만큼 성능차이가 나지않는다..!
  - RxJava에 비해 부족한 점이 많다.
@@ -53,7 +49,6 @@ categories: android
  - 코루틴에 관심이 있다면, 세미나 영상을 찾아보는것도 좋다.
  - 한글로 된 책은 "코틀린 동시성 프로그래밍" 이라는 책이 유일하지만, 현재는 구하기 힘들다.
 
----
 
 ## 참고사항
 
