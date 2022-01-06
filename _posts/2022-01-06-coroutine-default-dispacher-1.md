@@ -6,8 +6,8 @@ categories: coroutine
 
 코루틴은 디스패처를 지정해 어떤 스케줄러에서 돌아갈지 선택할 수 있다.
 
-개인적으로 디스패처를 지정했을때 어떻게 동작하는지 의문점이 들어서 공부를 해보았다.
-하면 할 수록 딥해지는 느낌이여서 디스패처랑 글이랑 1:1로 작성하였습니다.
+이번 공부의 목표는 코루틴의 디스패처가 어떻게 스케쥴러를 지정하고
+생성된 스레드풀은 어떤 옵션을 가지는지와 Default, IO 두가지 디스패처는 같은 스케쥴러이지만 어떤 방식으로 CPU 바운드, I/O 바운드가 동작하는지 확인하는것이다.
 
 # Dispatcher
 
@@ -188,13 +188,16 @@ public open class ExperimentalCoroutineDispatcher(
 > - 값이 1인 경우 `IllegalStateException` 예외를 발생시킨다.
 
 > MAX_POOL_SIZE
+> 
+> 이름 그대로 스레드 풀의 사이즈 limit
+> 
 > - `System.getProperty("kotlinx.coroutines.scheduler.max.pool.size")`도 마찬가지로 값이 `null`인 경우 기본값으로 사용하는데 이때 보내는 기본값은
 >   - (`CPU 코어 수` * 128)인 값을 계산 후 `CPU 코어 수`와 `(1 shl 21) - 2`를 비교해서 적정값을 반환한다.
 > 
 > > `(1 shl 21) - 2` shl는 Left Shift 연산이며 계산해보면 2,097,150이 나온다.
 > 
 > 개발자는 말보단 코드로 보는게 이해가 빠르니 아래의 코드를 확인해보자.
-> CPU 코어 개수는 필자의 디바이스 기준(갤럭시 노트 5)이다.
+> CPU 코어 개수는 필자의 디바이스 기준(갤럭시 노트 5 - 옥타코어) 8개다.
 >
 > ```
 > val AVAILABLE_PROCESSORS = 8
