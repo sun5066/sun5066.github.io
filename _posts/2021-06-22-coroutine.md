@@ -47,37 +47,37 @@ fun main(args: Array<String>) {
 
 다음 코드를 살펴보자. 아직 이해가 되지 않는 부분은 걱정하지 않아도 된다.
 ```
-suspend fun createCoroutines(amount: Int) {
-    val jobs = ArrayList<Job>()
-    for (i in 1..amount) {
-        jobs += launch {
+suspend fun test(cnt: Int) {
+    val jobList = arrayListOf<Job>()
+    (1..cnt).forEach {
+        jobList += launch {
             delay(1000)
         }
     }
-    jobs.forEach {
-        it.join()
+    jobList.forEach { job ->
+        job.join()
     }
 }
 ```
 
-함수는 파라메터 amount에 지정된 수만큼 코루틴을 생성해 각 코루틴을 1초 간 지연시킨후 모든 코루틴이 종료될 때까지 기다렸다가 반환한다. 예를 들어 이 함수는 amount 를 10,000으로 설정해서 호출될 수 있다.
+함수는 파라메터 amount에 지정된 수만큼 코루틴을 생성해 각 코루틴을 1초 간 지연시킨후 모든 코루틴이 종료될 때까지 기다렸다가 반환한다. 예를 들어 이 함수는 cnt 를 10,000으로 설정해서 호출될 수 있다.
 ```
 fun main(args: Array<String>) = runBlocking {
     val time = measureTimeMillis {
-        createCoroutines(10_000)
+        test(10_000)
     }
-    println("Took $time ms")
+    println("$time ms")
 }
 
-suspend fun createCoroutines(amount: Int) {
-    val jobs = ArrayList<Job>()
-    for (i in 1..amount) {
-        jobs += launch {
+suspend fun test(cnt: Int) {
+    val jobList = arrayListOf<Job>()
+    (1..cnt).forEach {
+        jobList += launch {
             delay(1000)
         }
     }
-    jobs.forEach {
-        it.join()
+    jobList.forEach { job ->
+        job.join()
     }
 }
 ```
@@ -85,7 +85,7 @@ suspend fun createCoroutines(amount: Int) {
 > measureTimeMillis()는 코드 블록을 갖는 인라인 함수이며 실행 시간을 밀리초로 반환한다.
 > measureTimeMillis()에는 자매 함수(sibling function)인 measureNanoTime()이 있으며, 시간을 나노초 단위로 반환한다. 두 함수 모두 코드의 실행 시간을 대략적으로 예측할 때 매우 유용하다.
 
-테스트 환경에서 amount 를 10,000으로 실행할 때 약 1,160ms 가 걸리는 반해 100,000으로 실행하는데 1,649ms가 소요됐다. 코틀린은 고정된 크기의 스레드 풀을 사용하고 코루틴을 스레드들에 배포가히기 때문에 실행 시간이 매우 적게 증가한다. 따라서 수천 개의 코루틴을 추가하는 것은 거의 영량이 없다. 코루틴이 일시 중단되는 동안 실행 중인 스레드는 다른 코루틴을 실행하는 데 사용되며 코루틴은 시작 또는 재개될 준비 상태가 된다.
+테스트 환경에서 cnt 를 10,000으로 실행할 때 약 1,160ms 가 걸리는 반해 100,000으로 실행하는데 1,649ms가 소요됐다. 코틀린은 고정된 크기의 스레드 풀을 사용하고 코루틴을 스레드들에 배포가히기 때문에 실행 시간이 매우 적게 증가한다. 따라서 수천 개의 코루틴을 추가하는 것은 거의 영량이 없다. 코루틴이 일시 중단되는 동안 실행 중인 스레드는 다른 코루틴을 실행하는 데 사용되며 코루틴은 시작 또는 재개될 준비 상태가 된다.
 
 Thread 클래스의 activeCount() 메소드를 활용하면 활성화된 스레드 수를 알 수 있다. 예를 들어 main() 함수를 업데이트해 다음 작업을 수행한다.
 ```
@@ -93,46 +93,46 @@ fun main(args: Array<String>) = runBlocking {
     println("${Thread.activeCount()} threads active at the start")
     
     val time = measureTimeMillis {
-        createCoroutines(10_000)
+        test(10_000)
     }
     
     println("${Thread.activeCount()} threads active at the end")
     println("Took $time ms")
 }
 
-suspend fun createCoroutines(amount: Int) {
-    val jobs = ArrayList<Job>()
-    for (i in 1..amount) {
-        jobs += launch {
+suspend fun test(cnt: Int) {
+    val jobList = arrayListOf<Job>()
+    (1..cnt).forEach {
+        jobList += launch {
             delay(1000)
         }
     }
-    jobs.forEach {
-        it.join()
+    jobList.forEach { job ->
+        job.join()
     }
 }
 ```
 
 
-이전과 같은 테스트 환경에서 10,000갸의 코루틴을 생성하기 위해서 4개의 스레드만 생성하면 된다.
+이전과 같은 테스트 환경에서 10,000개의 코루틴을 생성하기 위해서 4개의 스레드만 생성하면 된다.
 
-그러나 createCoroutines() 에 amount 값을 1로 낮추면 두개의 스레드만 생성된다.
+그러나 test() 에 cnt 값을 1로 낮추면 두개의 스레드만 생성된다.
 > 인텔리제이에서는 Monitor Control+Break 라는 스레드 때문에 애플리케이션이 시작될때 두개의 스레드가 있다.
 
-코루틴이 특정 스레드 안에서 실행되더라도 스레드와 묶이지 않는다는 점을 이해해야한다. 코루틴의 일부를 특정 스레드에서 실행하고, 실행을 중지한 다음 나중에 다른 스레드에서 계속 실행하는 것이 가능하다. 이전 예제에서도 일어났던 것으로 코틀린이 실행 가능한 스레드로 코루틴을 이동시키기 때문에다. 가령 createCoroutines()에 amount 를 3으로 하고, launch() 블록을 다음과 같이 변경해서 현재 실행 중인 스레드를 출력시키면 실제 내부에서 일어나는 일을 볼 수 있다.
+코루틴이 특정 스레드 안에서 실행되더라도 스레드와 묶이지 않는다는 점을 이해해야한다. 코루틴의 일부를 특정 스레드에서 실행하고, 실행을 중지한 다음 나중에 다른 스레드에서 계속 실행하는 것이 가능하다. 이전 예제에서도 일어났던 것으로 코틀린이 실행 가능한 스레드로 코루틴을 이동시키기 때문에다. 가령 test()에 cnt 를 3으로 하고, launch() 블록을 다음과 같이 변경해서 현재 실행 중인 스레드를 출력시키면 실제 내부에서 일어나는 일을 볼 수 있다.
 
 ```
-suspend fun createCoroutines(amount: Int) {
-    val jobs = ArrayList<Job>()
-    for (i in 1..amount) {
-        jobs += launch {
-            println("started $i in ${Thread.currentThread().name}")
+suspend fun test(cnt: Int) {
+    val jobList = arrayListOf<Job>()
+    (1..cnt).forEach {
+        jobList += launch {
+            println("시작 $i in ${Thread.currentThread().name}")
             delay(1000)
-            println("finished $i in ${Thread.currentThread().name}")
+            println("완료 $i in ${Thread.currentThread().name}")
         }
     }
-    jobs.forEach {
-        it.join()
+    jobList.forEach { job ->
+        job.join()
     }
 }
 ```
