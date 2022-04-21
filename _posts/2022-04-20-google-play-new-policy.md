@@ -4,6 +4,8 @@ date: 2022-04-20 17:20:00 -0400
 categories: policy
 ---
 
+이 글은 YouTube `Android Developers` 채널에 올라온 `Google Play 정책 바이트 - 2022년 4월 정책 업데이트` 영상을 정리한 내용입니다.
+
 ## 대상 API 수준
 
 모든 신규 앱과 앱 업데이트는 최신 주요 Android OS 버전으로부터 1년 이내의 Android API 수준을 타겟팅해야 합니다.
