@@ -5,8 +5,6 @@ date: 2022-04-21 14:15:00 -0400
 categories: android
 ---
 
-# 새 정책
-
 ## 대상 API 수준
 
 모든 신규 앱과 앱 업데이트는 최신 주요 Android OS 버전으로부터 1년 이내의 Android API 수준을 타겟팅해야 합니다.
