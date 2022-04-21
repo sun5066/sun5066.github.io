@@ -1041,7 +1041,7 @@ paginate_path: /recent/page:num/
 This sets the timezone environment variable, which Ruby uses to handle time and date creation and manipulation. Any entry from the [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) is valid. The default is the local time zone, as set by your operating system.
 
 ```yaml
-timezone: Asia/Seoul
+timezone: America/New_York
 ```
 
 ## Plugins
