@@ -1,6 +1,6 @@
 ---
 title: "2022년 Google Play 정책 바이트"
-date: 2022-04-22 17:20:00 -0900
+date: 2022-04-20 17:20:00 -0900
 categories: policy
 future: true
 ---
