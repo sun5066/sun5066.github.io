@@ -1,5 +1,4 @@
 ---
-published: true
 title: "2022년 Google Play 정책 바이트"
 date: 2022-04-21 14:15:00 -0400
 categories: android
