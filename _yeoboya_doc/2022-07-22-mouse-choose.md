@@ -1,4 +1,4 @@
-# 🖱️ 마우스 추천!!
+# 🖱️ 마우스 추천!! 😀
 
 - [제닉스 저소음 무선 버티컬 마우스 STORMX VM2](https://www.coupang.com/vp/products/1800119764?itemId=3062839464&vendorItemId=71050799239&q=%EC%A0%9C%EB%8B%89%EC%8A%A4+%EB%B2%84%ED%8B%B0%EC%BB%AC+%EB%A7%88%EC%9A%B0%EC%8A%A4&itemsCount=36&searchId=74e7ffee8cb048c6bead7c61ba1b0f3c&rank=6&isAddedCart=)
     - 가성비 굿
@@ -37,7 +37,7 @@
     - `35,990원`!
     
 
-## 결론은!! 
+## 🤔 결론은!! 
 
 - 누를때마다 딸깍 딸깍 소리나도 상관없다면 요거!!(추천!!)
   - [제닉스 버티컬 무선 블루투스 마우스 STORMX VM3][choose_1]
