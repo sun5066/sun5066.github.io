@@ -1,6 +1,6 @@
 ---
 title: "Jetpack Compose 이해 - 공식문서 읽어보기"
-date: 2022-08-31 17:20:00 +0900
+date: 2022-08-31 09:20:00 -0400
 categories: android
 ---
 
