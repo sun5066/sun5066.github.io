@@ -1,6 +1,7 @@
 ---
 title: "Android App Tester Install"
-date: 2023-03-13 09:20:00 -0400 categories: android
+date: 2023-03-13 10:20:00 -0400 
+categories: android
 ---
 
 ## 안드로이드 앱 테스터 설치 방법을 설명하는 글입니다.
