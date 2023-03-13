@@ -28,9 +28,12 @@ date: 2023-03-13 09:20:00 -0400 categories: android
 3. cd 명령어를 사용하여 fastlane 을 적용할 프로젝트 경로로 가준다.
 4. bundle init
 5. bundle add fastlane
-6. fastlane add_plugin firebase_app_distribution
-7. Fastfile에 아래의 명령어를 추가해주자.
-8. fastlane distribute
+6. bundle exec fastlane init
+7. app package 입력
+8. 플레이콘솔 서비스 파일 경로 입력
+9. fastlane add_plugin firebase_app_distribution
+10. Fastfile에 아래의 명령어를 추가해주자.
+11. fastlane distribute
 
 ```
   desc "build_android_app"
