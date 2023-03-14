@@ -7,7 +7,7 @@ tags: fastlane, firebase
 comments: 1
 ---
 
-## 안드로이드 앱 테스터 설치 방법을 설명하는 글입니다.
+안드로이드 앱 테스터 설치 방법을 설명하는 글입니다.
 
 - ![1](../assets/images/app_tester/1.jpg)
 - ![2](../assets/images/app_tester/2.jpg)

@@ -7,7 +7,8 @@ tags: android, view, grid, layout
 comments: 1
 ---
 
-## **RadioGroup**
+**RadioGroup**
+
 
 android.widget 패키지에 있는
 RadioGroup의 코드를 보면 LinearLayout 을 상속받고 있습니다.

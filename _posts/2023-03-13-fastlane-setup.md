@@ -7,7 +7,7 @@ tags: fastlane, firebase
 comments: 1
 ---
 
-# 윈도우 환경에서 FastLane을 사용하여 Firebase Distribute 테스트 자동배포 환경 세팅하기
+윈도우 환경에서 FastLane을 사용하여 Firebase Distribute 테스트 자동배포 환경 세팅하기
 
 최신 Release 버전의 Android Studio가 설치된 가정하에, 아래 목록들을 설치한다.
 

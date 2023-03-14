@@ -7,7 +7,9 @@ tags: android, video, media, record
 comments: 1
 ---
 
-# [ffmpeg][ffmpeg]
+[ffmpeg][ffmpeg]
+
+
 ```
 1. 자체 SO를 구축하면 사용 사례에 따라 크기를 약 2~3MB로 줄일 수 있다. (6000중 빌드 스크립트를 편집하려면 시간과 노력이 필요하지만..)
 2. 다양한 포맷 지원(거의 모든 포맷 지원)

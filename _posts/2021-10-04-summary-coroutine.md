@@ -7,7 +7,9 @@ tags: kotlin, coroutine
 comments: 1
 ---
 
-# 코루틴
+코루틴
+
+
 - 경량(가벼운) 스레드, suspend 지원으로 단일 스레드에서 많은 코루틴을 실행할수 있음
 - android developer 의 권장과 짧은 러닝타임이 장점
 - rxJava와 유사한 flow 지원
