@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "Jetpack Compose 이해 - 공식문서 읽어보기"
 date: 2022-08-31 09:20:00 -0400
 categories: android
+tags: android, compose
+comments: 1
 ---
 
 # Android Developers Compose 공식 문서

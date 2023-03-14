@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "2022년 Google Play 정책 바이트"
 date: 2022-04-21 17:20:00 +0900
 categories: policy
+tags: android, google, policy
+comments: 1
 ---
 
 이 글은 YouTube `Android Developers` 채널에 올라온 `Google Play 정책 바이트 - 2022년 4월 정책 업데이트` 영상을 정리한 내용입니다.

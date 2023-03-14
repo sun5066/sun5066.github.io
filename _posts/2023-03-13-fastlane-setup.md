@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "Android Fastlane & Firebase Distribute Setup(Feat Windows)"
 date: 2023-03-13 09:20:00 -0400 
 categories: android
+tags: fastlane, firebase
+comments: 1
 ---
 
 # 윈도우 환경에서 FastLane을 사용하여 Firebase Distribute 테스트 자동배포 환경 세팅하기

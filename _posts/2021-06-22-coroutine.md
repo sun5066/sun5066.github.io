@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "코틀린 코루틴 동시성 프로그래밍"
 date: 2021-06-22 17:20:00 -0400
-categories: android
+categories: coroutine
+tags: kotlin coroutine
+comments: 1
 ---
 
 # 프로세스, 스레드, 코루틴

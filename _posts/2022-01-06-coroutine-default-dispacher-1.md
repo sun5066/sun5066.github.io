@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "Coroutine Dispatchers.Default에 대해 알아보자"
 date: 2022-01-06 14:15:00 -0400
 categories: coroutine
+tags: kotlin, coroutine
+comments: 1
 ---
 
 코루틴은 디스패처를 지정해 어떤 스케줄러에서 돌아갈지 선택할 수 있다.

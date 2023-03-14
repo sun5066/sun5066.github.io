@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "ffmpeg, mediaRecorder, mediaCodec, VideoCapture 중 무엇을 사용해야할까?"
-comments: true
-description: ""
-keywords: "android"
+date: 2021-04-18 17:20:00 -0400
+categories: android
+tags: android, video, media, record
+comments: 1
 ---
 
 # [ffmpeg][ffmpeg]
