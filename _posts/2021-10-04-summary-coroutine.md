@@ -3,7 +3,7 @@ layout: post
 title: "안드로이드 코루틴 기초 요약본"
 date: 2021-10-04 17:20:00 -0400
 categories: android
-tags: kotlin, coroutine
+tags: kotlin coroutine
 comments: 1
 ---
 

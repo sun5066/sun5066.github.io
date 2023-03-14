@@ -3,7 +3,7 @@ layout: post
 title: "GridLayout + RadioGroup"
 date: 2021-06-08 17:20:00 -0400
 categories: android
-tags: android, view, grid, layout
+tags: android view grid layout
 comments: 1
 ---
 

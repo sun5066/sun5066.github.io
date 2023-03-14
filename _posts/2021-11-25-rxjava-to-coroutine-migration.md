@@ -3,7 +3,7 @@ layout: post
 title: "android RxJava 코루틴/Flow 으로 마이그레이션"
 date: 2021-12-03 14:15:00 -0400
 categories: android
-tags: android, kotlin, coroutine, rxjava
+tags: android kotlin coroutine rxjava
 comments: 1
 ---
 

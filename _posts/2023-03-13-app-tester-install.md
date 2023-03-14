@@ -3,7 +3,7 @@ layout: post
 title: "Android App Tester Install"
 date: 2023-03-13 09:20:00 +0800
 categories: android
-tags: fastlane, firebase
+tags: fastlane firebase
 comments: 1
 ---
 

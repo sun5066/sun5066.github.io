@@ -3,7 +3,7 @@ layout: post
 title: "안드로이드 Deprecated된 onActivityResult() 함수의 로직을 변경없이 마이그레이션 하기"
 date: 2021-11-12 9:00:00 -0400
 categories: android
-tags: android, kotlin
+tags: android kotlin
 comments: 1
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Coroutine Dispatchers.Default에 대해 알아보자"
 date: 2022-01-06 14:15:00 -0400
 categories: coroutine
-tags: kotlin, coroutine
+tags: kotlin coroutine
 comments: 1
 ---
 

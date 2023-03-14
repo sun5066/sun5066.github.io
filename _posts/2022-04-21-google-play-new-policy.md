@@ -3,7 +3,7 @@ layout: post
 title: "2022년 Google Play 정책 바이트"
 date: 2022-04-21 17:20:00 +0900
 categories: policy
-tags: android, google, policy
+tags: android google policy
 comments: 1
 ---
 
