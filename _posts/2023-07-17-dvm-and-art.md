@@ -7,7 +7,7 @@ tags: android art
 comments: 1
 ---
 
-## DVM(Dalvik Virtual Machine)
+### DVM(Dalvik Virtual Machine)
 
 당시 구글에서 안드로이드에 JVM이 아닌 DVM이 선택된 이유중 라이센스 문제 외에도 몇가지 이유가 있었다.
 
@@ -20,7 +20,7 @@ comments: 1
 > 
 > 모바일 디바이스에서 가장 중요한 리소스는 배터리다. 전력 소비를 줄이는 것이 Dalvik의 궁극적 목표였다.
 
-### 초기버전의 DVM
+#### 초기버전의 DVM
 
 레지스터 기반의 가상 아키텍처는 가상머신이 실행되는 타깃 하드웨어의 아키텍처와 훨씬 더 잘 매치되기 때문에 레지스터 기반 VM을 대상으로 하는 컴파일러는 타깃 하드웨어를 위해 미리 최적화를 할 수 있도록 컴파일러가 산출하는 실행 파일을 더 잘 준비할 수 있다.
 
@@ -32,7 +32,7 @@ comments: 1
 
 ------
 
-## ART
+### ART
 
 ART는 안드로이드 4.4(KitKat)에서 실험적인 런타임 환경으로 처음 도입되었으며, Android 5.0(Lollipop)에서는 Dalvik에서 ART로 완전히 대체되었다.
 
@@ -44,14 +44,14 @@ DVM의 JIT 최적화의 단점은 런타임 시점에서 컴파일되어 리소�
 이러한 이유로 구글은 DVM의 JIT 전략과 차별화를 위해 새로운 AOT(Ahead-Of-Time)라는 용어를 만들어 냈다.
 
 
-### AOT(Ahead-Of-Time)
+#### AOT(Ahead-Of-Time)
 
 DEX 중간 언어로 컴파일된 앱을 디바이스에 설치된 특정 시점에 dex2oat라는 툴을 사용해서 네이티브 코드로 변환함을 의미한다. 이 전략은 중간 언어(Java/Kotlin)의 핵심 목표인 이식성을 보장한다.
 
 
 ------
 
-## ART 작동 방식
+### ART 작동 방식
 
 ART는 AOT(ahead-of-time) 컴파일을 사용하며 Android 7.0(Nougat)부터는 AOT, JIT(just-in-time) 컴파일, 프로필 기반 컴파일을 조합하여 사용한다.
 
