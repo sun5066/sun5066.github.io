@@ -3,7 +3,7 @@ layout: post
 title: "Android init Process에 대해서(짧게) 알아보자"
 date: 2023-07-27 09:20:00 -0400 
 categories: android
-tags: android zygote
+tags: android init-process
 comments: 1
 ---
 
