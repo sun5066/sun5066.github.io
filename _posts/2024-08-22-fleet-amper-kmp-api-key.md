@@ -70,7 +70,7 @@ tasks.register("generateApiKey") {
             }
         """.trimIndent())
         
-        println("ApiKeysConfig.kt 파일이 ${apiKeyFile.absolutePath}에 생성되었습니다.")
+        println("ApiKeyConfig.kt 파일이 ${apiKeyFile.absolutePath}에 생성되었습니다.")
     }
 }
 ```
