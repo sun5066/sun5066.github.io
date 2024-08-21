@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kotlin Multiplatform에서의 API 키 관리"
+title: "KMP에서 API를 어떻게 관리해야할까?"
 date: 2024-08-22 09:20:00 -0400 
 categories: kmp
 tags: kmp api key
@@ -115,7 +115,7 @@ fun getArticles() = intent {
         val articles = articleRepository.getArticles(
             country = "us",
             category = "business",
-            apiKey = ApiKeyConfig.NEWS_API_KEY
+            apiKey = ApiKeyConfig.API_KEY
         )
         reduce { state.copy(articles = articles, isLoading = false) }
     } catch (e: Exception) {
@@ -127,3 +127,5 @@ fun getArticles() = intent {
 이번 포스팅에서는 Fleet IDE와 Amper를 사용한 Kotlin Multiplatform 프로젝트에서 API 키를 안전하게 관리하고, 여러 플랫폼에서 공통으로 사용할 수 있도록 자동으로 Kotlin 파일을 생성하는 방법을 소개했습니다. local.properties 파일을 통해 민감한 정보를 관리하고, 커스텀 Gradle Task를 사용하여 API 키를 쉽게 주입할 수 있었습니다.
 
 이 방식을 통해 기존 안드로이드에서 사용했던 BuildConfig 방식과 유사하게 사용할 수 있었습니다.
+
+[예제 프로젝트 보러가기](https://github.com/sun5066/DaliyPulse)
