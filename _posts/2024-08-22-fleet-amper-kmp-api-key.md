@@ -84,10 +84,9 @@ JetBrains Fleet 또는 CI/CD 환경에서 이 Task를 실행하기 위해 run.js
 {
   "configurations": [
     {
-      "name": "Generate API Key",
-      "type": "gradle",
-      "tasks": ["generateApiKey"],
-      "runDir": "$PROJECT_DIR"
+        "type": "gradle",
+        "name": "Generate API Key",
+        "tasks": ["generateApiKey"],
     }
   ],
   ...
