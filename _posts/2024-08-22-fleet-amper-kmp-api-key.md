@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "KMP에서 API를 어떻게 관리해야할까?"
+title: "Kotlin Multiplatform(Fleet, Amper) API Key 관리? 늘 하던대로."
 date: 2024-08-22 09:20:00 -0400 
 categories: kmp
 tags: kmp api key
