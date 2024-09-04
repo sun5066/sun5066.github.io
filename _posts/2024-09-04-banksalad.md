@@ -17,7 +17,7 @@ comments: 1
 
 이때 느낌이 쌔했다. 왠지 뱅크샐러드 같은데? 서류 합격인가?
 
-![1](https://sun5066.github.io/assets/images/banksalad/1.jpeg){: width="540" height="1140"}
+![1](https://sun5066.github.io/assets/images/banksalad/1.png){: width="540" height="1140"}
 
 역시나 서류 합격이었고, 이런 경험이 너무 오랜만이라 그런지 떨린 목소리로 채용담당자님과 짧은 통화를 했었다.
 
