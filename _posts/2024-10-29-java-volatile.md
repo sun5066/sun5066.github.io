@@ -79,9 +79,12 @@ public void writer() {
 ### volatile 원자성 보장, 그리고 CopyOnWriteArrayList
 앞서 설명 했듯이, `volatile`은 100% 원자성을 보장하지 못한다. `volatile`이 원자성을 보장하는 경우는 하나의 스레드에서 쓰기 작업을 하고, 다른 스레드에서 읽기 작업을 할 때다.
 
-아주 좋은 예시로, `java.util.concurrent` 패키지의 `CopyOnWriteArrayList가` 있다.
+아주 좋은 예시로, `java.util.concurrent` 패키지의 `CopyOnWriteArrayList`가 있다.
 
-> `CopyOnWriteArrayList`는 읽기 작업이 많은 환경에서 유리하며, `array` 필드가 `volatile`로 선언되어 모든 읽기 작업에서 최신 데이터를 참조한다. 쓰기 작업은 동기화(synchronized)로 보호되어 데이터 일관성을 유지한다. 즉, 읽기 작업에서는 최신 값을, 쓰기 작업에서는 안전한 원자적 연산을 보장하는 구조이다.
+`CopyOnWriteArrayList`에 대해 짧게 설명해보자면,
+
+- 쓰기 작업이 적고, 읽기 작업이 많은 경우에 사용해야한다.
+- 쓰기 작업에만 동기화(synchronized)가 걸려있고, 읽기 작업에는 동기화가 되어있지 않으므로, 효율적으로 동기화 작업을 수행한다.
 
 `CopyOnWriteArrayList`의 내부 코드를 참고해보자.
 
